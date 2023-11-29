@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import  HeaderComponent from './Components/HeaderComponent'; // Make sure the path is correct
+import { ListOrganisation } from './Components/ListOrganisation';
+// import  FooterComponent  from './Components/FooterComponent';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <HeaderComponent/>
+      <Router>
+        <Routes>
+          {/* <Route path="/login" element={} /> */}
+          {/* <Route path="/organisation/:id" element={<Details data={data} reviews={reviews} onDelete={deleteReview} onAdd={addReview} onBuy={addProduct}/>}></Route> */}
+          <Route path="/organisation" element={
+            <div className="container">
+              <ListOrganisation/>
+            </div>
+             
+          } />
+          {/* <Route path="/profile" element={<Profile />} /> */}
+        </Routes>
+    </Router>
+      
     </div>
   );
 }
