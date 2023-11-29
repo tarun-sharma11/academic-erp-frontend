@@ -5,6 +5,7 @@ export const ListOrganisationHr = () => {
   return (
     <div>
         <h2 className='text-center'>Organisation's Hr List</h2>
+        
         <div className="row">
             <table className="table table-striped table-bordered">
                 <thead>
