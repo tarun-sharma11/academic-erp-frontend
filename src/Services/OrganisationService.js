@@ -3,6 +3,7 @@ import axios from "axios";
 const ORG_API_BASE_URL = "http://localhost:9191/api/v1/organisations";
 const ORG_BY_ID_API_BASE_URL = "http://localhost:9191/api/v1/organisation";
 const ORG_HR_BY_ID_API_BASE_URL = "http://localhost:9191/api/v1/organisation/hr";
+const LOGIN_API_BASE_URL = "http://localhost:9191/api/v1/employee/login";
 class OrganisationService {
   getAllOrganisations() {
     return axios.get(ORG_API_BASE_URL);
@@ -31,6 +32,10 @@ class OrganisationService {
   }
   updateOrganisationHr(id,organisationHr){
     return axios.put(ORG_HR_BY_ID_API_BASE_URL+"/"+id,organisationHr);
+  }
+  // Login service
+  loginEmployee(login){
+    return axios.post(LOGIN_API_BASE_URL,login);
   }
 }
 

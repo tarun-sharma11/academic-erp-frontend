@@ -6,6 +6,7 @@ import { ListOrganisation } from './Components/ListOrganisation';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ListOrganisationHr } from './Components/ListOrganisationHr';
 import CreateOrganisationHr from './Components/CreateOrganisationHr';
+import Login from './Components/LoginComponent';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <HeaderComponent/>
       <Router>
         <Routes>
-          {/* <Route path="/login" element={} /> */}
+          <Route path="/" element={ <div className="container"> <Login/></div>} />
           {/* <Route path="/organisation/:id" element={<Details data={data} reviews={reviews} onDelete={deleteReview} onAdd={addReview} onBuy={addProduct}/>}></Route> */}
           <Route path="/organisation" element={
             <div className="container">
