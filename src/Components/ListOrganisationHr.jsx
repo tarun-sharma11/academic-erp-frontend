@@ -44,18 +44,27 @@ export const ListOrganisationHr = () => {
 
   return (
     <div>
-      <h2 className="text-center">Organisation's Hr List</h2>
+      <h2 className="text-center">Organisation's HR List</h2>
       <div style={{ margin: '15px' }}>
-        <Link to={`/createorganisation/${organisationId}/hr/-1`} className="btn btn-primary">
-          Add HR
-        </Link>
-        <input
-          type="text"
-          placeholder="Search by name or email"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="form-control mt-2"
-        />
+        <div className="d-flex justify-content-between align-items-center">
+          <Link to={`/createorganisation/${organisationId}/hr/-1`} className="btn btn-primary">
+            Add HR
+          </Link>
+          <div>
+            <Link to={`/organisation`}>
+                <button className="btn btn-success ">Go Back to Organisations</button>
+            </Link>
+          </div>
+        </div>
+       
+            <input
+              type="text"
+              placeholder="Search by name or email"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="form-control form-control-md mt-2 mx-auto"
+            />
+            
       </div>
       <div className="row">
         <table className="table table-striped table-bordered">
