@@ -4,6 +4,8 @@ import  HeaderComponent from './Components/HeaderComponent'; // Make sure the pa
 import { ListOrganisation } from './Components/ListOrganisation';
 // import  FooterComponent  from './Components/FooterComponent';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ListOrganisationHr } from './Components/ListOrganisationHr';
+import CreateOrganisationHr from './Components/CreateOrganisationHr';
 
 function App() {
   return (
@@ -23,10 +25,19 @@ function App() {
             <div className="container">
               <CreateOrganisation/>
             </div>
+            } />
+          <Route path="/createorganisation/:id/hr/:hrid" element={
+            <div className="container">
+              <CreateOrganisationHr/>
+            </div>
+            } />  
+          <Route path="/organisation/:id/hr" element={
+            <div className="container">
+              <ListOrganisationHr/>
+            </div>
              
-          } />
-          {/* <Route path="/profile" element={<Profile />} /> */}
-        </Routes>
+            } />
+          </Routes>
     </Router>
       
     </div>
